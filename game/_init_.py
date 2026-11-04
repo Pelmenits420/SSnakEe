@@ -1,0 +1,1 @@
+"""SsnakEe spēles noteikumi (bez pygame)."""

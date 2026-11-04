@@ -1,0 +1,1 @@
+"""SsnakEe attēlošana ar pygame."""

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Līderu tabula (Top 10)</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Vieta</th>
+                <th>Spēlētājs</th>
+                <th>Punkti</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in scores %}
+            <tr>
+                <td>{{ loop.index }}.</td>
+                <td><a href="/players/{{ player.player }}" style="color: #4caf50;">{{ player.player }}</a></td>
+                <td>{{ player.score }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="3">Pagaidām nav rezultātu. Nospēlē spēli!</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
